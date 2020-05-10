@@ -1,9 +1,9 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
-static const unsigned int gappx     = 15;        /* gaps between windows */
-static const unsigned int snap      = 25;       /* snap pixel */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int gappx     = 8;        /* gaps between windows */
+static const unsigned int snap      = 10;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Inconsolata:size=14" };
@@ -15,8 +15,8 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = {  col_gray1, col_gray3, col_gray2 },
-	[SchemeSel]  = {  col_gray3, col_gray1, col_cyan  },
+	[SchemeNorm] = {  col_gray1, col_gray3, "#111111" },
+	[SchemeSel]  = {  col_gray3, col_gray1, col_gray4  },
 };
 
 /* tagging */
@@ -31,6 +31,8 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            0,             1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,             0,           -1 },
 	{ "Sxiv",     NULL,       NULL,       0,            1,             1,           -1 },
+	{ "Nemo",     NULL,       NULL,       0,            1,             1,           -1 },
+	{ "Lxappearance",     NULL,       NULL,       0,            1,             1,           -1 },
 };
 
 /* layout(s) */
